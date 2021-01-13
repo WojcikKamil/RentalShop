@@ -10,7 +10,19 @@ class Index(View):
         print(product)
         return redirect('homepage')
 
-def get(self, request):
-    products = None
-    categories = Category.get_all_categories()
+    def get(self, request):
+        products = None
+        categories = Category.get_all_categories()
+        categoryID = request.GET.get('category')
+        if categoryID:
+            products = Product.get_all_products_by_categoryid(categoryID)
+        else:
+            products = Product.get_all_products();
+
+        data = {}
+        data['products'] = products
+        data['categories'] = categories
+
+        print(request.session.get('email'))
+        return render(request, 'index.html', data)
 
