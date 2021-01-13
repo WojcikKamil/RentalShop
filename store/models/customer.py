@@ -21,5 +21,7 @@ class Customer(models.Model):
         if Customer.objects.get(email = self.email):
             return True
 
+        return False
+
 
 

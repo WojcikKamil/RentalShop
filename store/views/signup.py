@@ -23,6 +23,7 @@ class Signup(View):
             'email': email
         }
         error_message = None
+
         customer = Customer(first_name=first_name,
                             last_name=last_name,
                             phone=phone,
@@ -60,4 +61,5 @@ class Signup(View):
             error_message = 'Email must be 5 char or longer'
         elif customer.isExists():
             error_message = 'Email Adress Already Registered'
+
         return error_message
