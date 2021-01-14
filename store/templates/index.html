@@ -54,7 +54,7 @@
           <input type="submit" value="-" class="btn btn-block btn-secondary">
         </form>
 
-        <div class="text-center col">{{product|cart_quantity:request.session.cart}} in Cart</div>
+        <div class="text-center col">Rent for {{product|rental_time:request.session.cart}} weeks</div>
         <form action="/" class="col-2" method="post">
           {% csrf_token %}
           <input hidden type="text" name='product' value='{{product.id}}'> 

@@ -15,7 +15,7 @@
                     <th>Image</th>
                     <th>Product</th>
                     <th>Price</th>
-                    <th>Quantity</th>
+                    <th>Rental Time</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -27,7 +27,7 @@
                     <td><img style="height: 80px;" class="rounded" src="{{product.image.url}}"</td>
                     <td>{{product.name}}</td>
                     <td>{{product.price|currency}}</td>
-                    <td>{{product|cart_quantity:request.session.cart}}</td>
+                    <td>{{product|rental_time:request.session.cart}} weeks</td>
                     <td>{{product|price_total:request.session.cart|currency}}</td>
                 </tr>
 
