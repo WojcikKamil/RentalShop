@@ -24,7 +24,7 @@
                 {% for product in products %}
                 <tr>
                     <td>{{forloop.counter}}</td>
-                    <td><img style="height: 80px;" class="rounded" src="{{product.image.url}}"</td>
+                    <td><img style="height: 80px;" class="rounded" src="{{product.image.url}}"></td>
                     <td>{{product.name}}</td>
                     <td>{{product.price|currency}}</td>
                     <td>{{product|rental_time:request.session.cart}} weeks</td>
@@ -75,7 +75,7 @@ role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   aria-describedby="helpId">
                 </div>
                 <input type="submit" class="btn bgn-outline-info col-lg-6" 
-                value="Check out"
+                value="Check out">
             </form>
         </div>
       </div>
