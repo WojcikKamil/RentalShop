@@ -4,6 +4,8 @@
 
 {% load cart %}
 
+{% load custom_filter %}
+
 <!-- body -->
 <div class="container-fluid mt-3">
   <div class="row">
@@ -37,7 +39,7 @@
       <div class="card-body">
           <p class="card-title">{{product.name.url}}</p>
           <p class="card-text">{{product.description}}</p>
-          <p class="card-text"><b>{{product.price}}</b></p>
+          <p class="card-text"><b>{{product.price|currency}}</b></p>
       </div>
 
      <div class = "card-footer p-0 no-gutters">
@@ -83,14 +85,4 @@
 
   </div>
 </div> 
-<div <div class="jumbotron">
-  <h1 class="display-3">Jumbo heading</h1>
-  <p class="lead">Jumbo helper text</p>
-  <hr class="my-2">
-  <p>More info</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-  </p>
-</div>
-
 {% endblock %}
