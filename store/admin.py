@@ -5,11 +5,14 @@ from .models.customer import Customer
 from .models.orders import Order
 from .models.payment import Payment
 
+
 class AdminProduct(admin.ModelAdmin):
-    list_display = ['name','price','category']
+    list_display = ['name', 'price', 'category']
+
 
 class AdminCategory(admin.ModelAdmin):
     list_display = ['name']
+
 
 # Register your models here.
 admin.site.register(Product, AdminProduct)

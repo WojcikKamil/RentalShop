@@ -21,7 +21,7 @@ class CheckOut(View):
                           product=product,
                           price=product.price,
                           phone=phone,
-                          rentalTime=cart.get(str(product.id)))
-
+                          rental_time=cart.get(str(product.id)))
+            order.save()
         request.session['cart'] = {}
         return redirect('cart')
