@@ -5,10 +5,9 @@
 {% load cart %}
 
 {% load custom_filter %}
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
-<script type="text/javascript" src="city_state.js"></script>
 
 <div class="container">
     <div class="border rounded p-4 m-4">
@@ -65,7 +64,7 @@ role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="py-5 text-center">
 
         <!-- Trzeba wyśrodkować, a obrazek można zawsze zmienić :P -->
-        
+
           <img class="mb-4" src="https://img.fontspace.co/preview/d/c61ec490abaf4c8d964d2f95f2eb39db/dk-checkout-font-design-graphic-16645-1440x720.png"
           width= "72" height="72">
         </div>
@@ -88,33 +87,63 @@ role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   aria-describedby="helpId">
                 </div>
 
-
-                <div class="form-group">
+                  <div class="form-group">
                   <label for="exampleFormControlSelect1">Country</label>
                   <select onchange="set_city_state(this,city_state)"
-                  class="form-control" name = "country"
-                  id="txtplacename">
-              
+                  class="form-control" 
+                   id="txtregion" name="region">
+                
                   </select>
                 </div>
 
                <div class="form-group">
                   <label for="exampleFormControlSelect1">Region</label>
-                  <select class="form-control" onchange="set_country(this,country,city_state)"
+                  <select class="form-control" 
                    id="txtregion" name="region" >
+                </select>
+                  </div>
 
-                  </select>
+                  <div class="form-group">
+                  <label for="">Card Owner</label>
+                  <input type="text" name="phone" id=""
+                  class="form-control" placeholder=""
+                  aria-describedby="helpId">
                 </div>
 
-                <button class="button is-primary" id="submitBtn">Purchase!</button>
-              </form>
-        </div>
+                <div class="form-group">
+                  <label for="">Card number</label>
+                  <input type="text" name="phone" id=""
+                  class="form-control" placeholder=""
+                  aria-describedby="helpId">
+                </div>
+                  <div class="row">
+                  <div class="col-sm-2">
+                  <label for="">Expires</label>
+                  <input type="text" name="phone" id=""
+                  class="form-control" placeholder=""
+                  aria-describedby="helpId">
+                  </div>
+                  <div class="col-sm-2">
+                  <label for="">CVC</label>
+                  <input type="text" name="phone" id=""
+                  class="form-control" placeholder=""
+                  aria-describedby="helpId">
+                  </div>
+                  
+                </div>
+                <hr>
+                    <button type="submit" class="button is-primary btn-lg">Purchase!</button>
+                  </form>
+                </div>
       </div>
+      
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
+
+
 
 {% endblock %}
