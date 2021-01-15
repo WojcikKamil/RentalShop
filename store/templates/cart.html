@@ -5,6 +5,11 @@
 {% load cart %}
 
 {% load custom_filter %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script type="text/javascript" src="city_state.js"></script>
+
 <div class="container">
     <div class="border rounded p-4 m-4">
         <p class="display-4 ml-4">Cart</p>
@@ -65,18 +70,36 @@ role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         </button>
       </div>
       <div class="modal-body">
-        <div class="m-2 p-3">
+        <div class="">
             <form action="/check-out" method="POST">
+
                 {% csrf_token %}
+
                 <div class="form-group">
                   <label for="">Phone Number</label>
                   <input type="text" name="phone" id="" 
                   class="form-control" placeholder="" 
                   aria-describedby="helpId">
                 </div>
-                <input type="submit" class="btn bgn-outline-info col-lg-6" 
-                value="Check out">
-            </form>
+
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Country</label>
+                  <select onchange="set_city_state(this,city_state)"
+                  class="form-control" id="exampleFormControlSelect1">
+                  
+                  </select>
+                </div>
+
+               <div class="form-group">
+                  <label for="exampleFormControlSelect1">Region</label>
+                  <select class="form-control" onchange="set_country(this,country,city_state)"
+                   id="exampleFormControlSelect1">
+                  
+                  </select>
+                </div>
+                
+                <button class="button is-primary" id="submitBtn">Purchase!</button>
+              </form>
         </div>
       </div>
       <div class="modal-footer">
