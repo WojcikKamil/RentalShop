@@ -19,7 +19,6 @@
                     <th>Rental Time</th>
                     <th>Total</th>
                     <th>Status</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -49,24 +48,8 @@
 
                 {% endfor %}
             </tbody>
-            <tfoot>
-                <tr>
-                    <th colspan="3"></th>
-                    <th class="" colspan="">Total</th>
-                    <th>{{products|total_cart_price:request.session.cart|currency}}</th>
-                </tr>
-            </tfoot>
         </table>
-        
-        <div class="m-3 p-3">
-            <a href="#" data-toggle="modal" 
-            data-target="#exampleModal" 
-            class="btn btn-outline-info border rounded 
-            col-lg-3 float-right">Check out</a>
-        </div>
     </div>
 </div>
-
-
 
 {% endblock %}
