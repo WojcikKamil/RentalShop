@@ -80,13 +80,6 @@ role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                 {% csrf_token %}
 
-                <div class="form-group">
-                  <label for="">Phone Number</label>
-                  <input type="text" name="phone" id=""
-                  class="form-control" placeholder=""
-                  aria-describedby="helpId">
-                </div>
-
                   <div class="form-group">
                   <label for="exampleFormControlSelect1">Country</label>
                   <select onchange="set_city_state(this,city_state)"
@@ -105,40 +98,44 @@ role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                   <div class="form-group">
                   <label for="">Card Owner</label>
-                  <input type="text" name="phone" id=""
-                  class="form-control" placeholder=""
-                  aria-describedby="helpId">
+                  <input type="text" name="" id=""
+                  class="form-control" placeholder="">
                 </div>
 
-                <div class="form-group">
+                
+                 <div class="form-group">
                   <label for="">Card number</label>
-                  <input type="text" name="phone" id=""
-                  class="form-control" placeholder=""
-                  aria-describedby="helpId">
+                  <input type="text" name="" id=""
+                  class="form-control" placeholder="1111 2222 3333 4444"
+                  >
                 </div>
+                  
+                  <label for="">Expiry date</label>
                   <div class="row">
                   <div class="col-sm-2">
-                  <label for="">Expires</label>
-                  <input type="text" name="phone" id=""
-                  class="form-control" placeholder=""
-                  aria-describedby="helpId">
+                  <input type="text" name="" id=""
+                  class="form-control" placeholder="Month"
+                  >
                   </div>
                   <div class="col-sm-2">
-                  <label for="">CVC</label>
-                  <input type="text" name="phone" id=""
-                  class="form-control" placeholder=""
-                  aria-describedby="helpId">
-                  </div>
-                  
+                  <input type="text" name="" id=""
+                  class="form-control" placeholder="Year">
+                  </div>               
                 </div>
+                
+                <label for="">CVC</label>
+                 <div class="row">
+                 <div class="col-sm-2">
+                  <input type="text" name="phone" id=""
+                  class="form-control" placeholder="123">
+                  </div>  
+                 </div>
+
+                
                 <hr>
                     <button type="submit" class="button is-primary btn-lg">Purchase!</button>
                   </form>
                 </div>
-      </div>
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
