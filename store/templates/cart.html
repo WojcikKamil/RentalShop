@@ -62,8 +62,14 @@ role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-        Check Out Form</h5>
+        <div class="py-5 text-center">
+
+        <!-- Trzeba wyśrodkować, a obrazek można zawsze zmienić :P -->
+        
+          <img class="mb-4" src="https://img.fontspace.co/preview/d/c61ec490abaf4c8d964d2f95f2eb39db/dk-checkout-font-design-graphic-16645-1440x720.png"
+          width= "72" height="72">
+        </div>
+      
         <hr>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -88,10 +94,7 @@ role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <select onchange="set_city_state(this,city_state)"
                   class="form-control" name = "country"
                   id="txtplacename">
-                  <script type="text/javascript">
-setRegions(this);
-</script>
-
+              
                   </select>
                 </div>
 
