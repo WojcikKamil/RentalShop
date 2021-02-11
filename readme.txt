@@ -1,5 +1,12 @@
+Instalacja:
+Jak otworzysz pliczek w frameworku, w bashu:
+
+
+pip install -r requirements.txt
+
+
 Aby uruchomić server:
-W bashu(pycharma np):
+
 python manage.py runserver
 
 froncik robiony glownie bootstrapem
