@@ -1,3 +1,5 @@
+NIE DZIALA XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+
 Instalacja:
 Jak otworzysz pliczek w frameworku, w bashu:
 
